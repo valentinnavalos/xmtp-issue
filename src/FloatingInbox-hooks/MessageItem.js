@@ -78,7 +78,7 @@ const MessageItem = ({ message, senderAddress, isPWA = false }) => {
     }
   };
 
-  const isSender = senderAddress === client?.address;
+  const isSender = senderAddress !== client?.address;
 
   const MessageComponent = isSender ? "li" : "li";
 

@@ -194,7 +194,7 @@ export default function Home({
     setIsWalletCreated(true); // Set isWalletCreated to true when a new wallet is created
   };
   const initXmtpWithKeys = async () => {
-    const options = { env: env ? env : getEnv() };
+    const options = { env: "production" };
     const address = await getAddress(signer);
     if (!address) return;
     let keys = loadKeys(address);
